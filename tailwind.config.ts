@@ -1,6 +1,8 @@
 import type { Config } from 'tailwindcss'
 
-const config: Config = {
+
+// allow daisyui property on the exported config
+const config: Config & { daisyui?: any } = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,6 +17,11 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["emerald"],
+
+  
+  }
 }
 export default config
