@@ -1,6 +1,5 @@
-@import "daisyui";
-
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "daisyui";
 
 :root {
   --font-sans: system-ui, sans-serif;
