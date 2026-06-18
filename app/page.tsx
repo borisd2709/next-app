@@ -1,8 +1,7 @@
-import { getServerSession } from "next-auth/next";
-import { authOptions } from "./api/auth/[...nextauth]/route";
 
-export default async function Home() {
-  const session = await getServerSession(authOptions);
+
+export default function Home() {
+  
 
   return (
     <main className="max-w-4xl mx-auto p-6 space-y-10">
@@ -10,7 +9,7 @@ export default async function Home() {
       {/* HERO */}
       <section className="text-center space-y-2">
         <h1 className="text-3xl font-bold text-primary">
-          Hallo {session && <span>{session.user!.name}</span>}
+          Hallo 
         </h1>
         <p className="text-3xl font-bold text-primary">
           Heb je last van kaakklachten? Je bent niet de enige.
